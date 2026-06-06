@@ -1343,3 +1343,407 @@ body, html {
 }
 
 }
+.brand-name {
+    display: flex;
+    flex-direction: column; /* لجعل الاسمين فوق بعض */
+    line-height: 1; /* لتقليل المسافة بين السطرين */
+    text-align: right;
+}
+
+.top-name {
+    font-size: 0.75rem; /* حجم صغير للسطر العلوي */
+    font-weight: 700;
+    color: #c5a059; /* اللون الذهبي */
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.bottom-name {
+    font-size: 1.5rem; /* حجم أكبر للاسم الأساسي */
+    font-weight: 900;
+    color: #113d2c; /* اللون الزمردي (يتغير للأبيض عند السكرول في الناف بار) */
+}
+
+.bottom-name span {
+    color: #c5a059; /* كلمة الرياض بالذهبي */
+}
+
+/* لضمان تغير اللون عند تحول الناف بار للوضع الداكن (expand) */
+.smart-nav.expand .bottom-name {
+    color: #ffffff;
+}
+/* Royal Services Master Redesign */
+.royal-services {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #062319 0%, #0a3a2a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.emerald-glow-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.08), transparent 70%);
+    pointer-events: none;
+}
+
+.luxury-heading {
+    text-align: center;
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+.gold-badge {
+    background: #c5a059;
+    color: #062319;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    margin: 25px 0;
+    font-weight: 900;
+}
+
+.main-title span { color: #c5a059; }
+
+.luxury-desc {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+/* Grid Layout */
+.royal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* The Royal Card Design */
+.royal-card {
+    background: #ffffff; /* خلفية بيضاء لتباين عالي للنصوص */
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.card-img-box {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s ease;
+}
+
+/* Floating Icon */
+.royal-icon {
+    width: 85px; height: 85px;
+    background: #c5a059;
+    color: #062319;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 2.2rem;
+    position: absolute;
+    top: -42px; left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.5);
+    border: 6px solid #fff;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.card-body {
+    padding: 60px 40px 45px;
+    text-align: center;
+    position: relative;
+}
+
+/* ضبط ألوان النصوص لتكون واضحة جداً */
+.royal-card h3 {
+    font-size: 1.8rem;
+    color: #062319; /* أخضر غامق جداً للعناوين */
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.royal-card p {
+    color: #333333; /* رمادي غامق جداً للنصوص الطويلة لسهولة القراءة */
+    font-size: 1.15rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+/* Hover Animations */
+.royal-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 40px 80px rgba(197, 160, 89, 0.3);
+}
+
+.royal-card:hover .card-img-box img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+.royal-card:hover .royal-icon {
+    background: #062319;
+    color: #c5a059;
+    transform: translateX(-50%) rotateY(360deg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .royal-grid { grid-template-columns: 1fr; width: 95%; }
+    .card-img-box { height: 240px; }
+    .main-title { font-size: 2.2rem; }
+}
+/* Container of the badge */
+.experience-luxury-badge {
+    position: absolute;
+    top: 50%;
+    right: -40px; /* مكان تواجده بالنسبة للصورة */
+    transform: translateY(-50%);
+    z-index: 20;
+    perspective: 1000px;
+}
+
+.badge-inner {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #113d2c 0%, #062319 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* شكل عضوي غير منتظم جذاب */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3), inset 0 0 20px rgba(197, 160, 89, 0.2);
+    animation: morphing 8s infinite alternate ease-in-out, floatBadge 4s infinite ease-in-out;
+    border: 2px solid rgba(197, 160, 89, 0.3);
+}
+
+.badge-content {
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+
+.gold-icon {
+    font-size: 1.5rem;
+    color: #c5a059;
+    margin-bottom: 5px;
+    display: block;
+    animation: pulseGold 2s infinite;
+}
+
+.badge-num {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(to bottom, #fff, #c5a059);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d1d1d1;
+}
+
+/* Orbiting Rings - الحلقات المدارية */
+.orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    pointer-events: none;
+}
+
+.ring-1 {
+    inset: -10px;
+    border-style: dashed;
+    animation: rotateRing 10s linear infinite;
+}
+
+.ring-2 {
+    inset: -20px;
+    border-width: 2px;
+    border-color: transparent transparent #c5a059 transparent;
+    animation: rotateRing 6s linear infinite reverse;
+}
+
+.ring-3 {
+    inset: -30px;
+    border-style: dotted;
+    opacity: 0.5;
+    animation: rotateRing 15s linear infinite;
+}
+
+/* Animations */
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-60%) translateX(10px); }
+}
+
+@keyframes morphing {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    100% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+}
+
+@keyframes pulseGold {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* التوافق مع الموبايل */
+@media (max-width: 768px) {
+    .experience-luxury-badge {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none !important;
+        margin: 40px auto;
+    }
+    .badge-inner {
+        width: 150px;
+        height: 150px;
+    }
+    .badge-num { font-size: 2.8rem; }
+}
+/* Contact Section Style */
+.contact-ultra {
+    padding: 120px 0;
+    position: relative;
+    background: url('images/bg.jpg') center/cover fixed; /* صورة الخلفية المحددة */
+    overflow: hidden;
+    text-align: center;
+}
+
+.contact-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 35, 25, 0.85); /* طبقة خضراء داكنة فوق الصورة */
+    backdrop-filter: blur(10px); /* تأثير البلور القوي */
+}
+
+.contact-ultra .container { position: relative; z-index: 10; }
+
+.white-title { font-size: 3.5rem; color: #fff; font-weight: 900; margin: 20px 0; }
+.white-title span { color: #c5a059; }
+.contact-p { color: #d1d1d1; max-width: 700px; margin: 0 auto 60px; font-size: 1.2rem; }
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 50px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+    display: block;
+}
+
+.contact-card-box .icon-circle {
+    width: 80px; height: 80px;
+    background: #c5a059;
+    color: #113d2c;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.contact-card-box h3 { color: #fff; font-size: 1.8rem; margin-bottom: 10px; }
+.contact-card-box p { color: #aaa; margin-bottom: 15px; }
+.contact-val { color: #c5a059; font-size: 1.5rem; font-weight: 900; }
+
+.contact-card-box:hover {
+    background: rgba(197, 160, 89, 0.1);
+    transform: translateY(-10px);
+    border-color: #fff;
+}
+
+/* Footer Style */
+.main-footer {
+    background: #040d0a;
+    padding: 100px  30px;
+    color: #fff;
+    border-top: 5px solid #c5a059;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.footer-logo { font-size: 1.8rem; font-weight: 900; color: #fff; margin-bottom: 20px; }
+.footer-logo span { color: #c5a059; }
+.about-col p { color: #aaa; line-height: 1.8; margin-bottom: 25px; }
+
+.col-title { font-size: 1.3rem; color: #c5a059; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+.col-title::after { content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 2px; background: #c5a059; }
+
+.footer-links, .contact-info { list-style: none; }
+.footer-links li, .contact-info li { margin-bottom: 15px; color: #aaa; }
+.footer-links a { text-decoration: none; color: #aaa; transition: 0.3s; }
+.footer-links a:hover { color: #c5a059; padding-right: 10px; }
+
+.contact-info i { color: #c5a059; margin-left: 10px; }
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 30px;
+}
+
+.footer-bottom p { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+
+.gmt-credit a {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* Mobile Fixes */
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .contact-cards { grid-template-columns: 1fr; }
+    .col-title::after { right: 50%; transform: translateX(50%); }
+    .white-title { font-size: 2.2rem; }
+}

@@ -118,3 +118,25 @@ document.querySelectorAll('.blog-card').forEach(card => {
     card.style.transition = "all 0.8s ease-out";
     blogObserver.observe(card);
 });
+// أنميشن السكرول للخدمات الملكية
+const servicesReveal = () => {
+    const cards = document.querySelectorAll('.royal-card');
+    cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, index * 100);
+        }
+    });
+};
+
+// تهيئة الكروت للظهور
+document.querySelectorAll('.royal-card').forEach(c => {
+    c.style.opacity = "0";
+    c.style.transform = "translateY(50px)";
+    c.style.transition = "all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)";
+});
+
+window.addEventListener('scroll', servicesReveal);
