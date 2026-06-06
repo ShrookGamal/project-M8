@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة زهور الرياض | كافة المقالات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #fdfdfd; }
+        .blog-hero { padding: 120px 0 60px; background: #113d2c; text-align: center; color: #fff; border-bottom: 5px solid #c5a059; }
+        .blog-hero h1 { font-size: 3.5rem; color: #c5a059; font-weight: 900; }
+        .full-blog-grid { padding: 80px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; width: 90%; margin: 0 auto; }
+        .big-card { background: #fff; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: 0.5s; border: 1px solid #eee; }
+        .big-card:hover { transform: translateY(-15px); border-color: #c5a059; box-shadow: 0 30px 60px rgba(197, 160, 89, 0.2); }
+        .big-card img { width: 100%; height: 350px; object-fit: cover; }
+        .card-info { padding: 40px; }
+        .card-info h2 { font-size: 2rem; color: #113d2c; margin-bottom: 20px; }
+        .card-info p { font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 25px; }
+        .read-btn { display: inline-block; padding: 12px 35px; background: #113d2c; color: #fff; text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.4s; }
+        .read-btn:hover { background: #c5a059; }
+        @media (max-width: 992px) { .full-blog-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <section class="blog-hero">
+        <h1>موسوعة الجمال الطبيعي</h1>
+        <p>نصائح الخبراء لتصميم وصيانة حدائق المستقبل</p>
+    </section>
+
+    <main class="full-blog-grid">
+        <!-- مقال 1 -->
+        <div class="big-card">
+            <img src="images/art-1.jpg" alt="">
+            <div class="card-info">
+                <h2>أسرار أنظمة الري الذكية الموفرة للمياه</h2>
+                <p>اكتشف كيف توفر 50% من استهلاك المياه مع الحفاظ على اخضرار حديقتك طوال العام باستخدام التقنيات الحديثة...</p>
+                <a href="article.html?id=1" class="read-btn">اقرأ المقال كاملاً</a>
+            </div>
+        </div>
+        <!-- مقال 2 -->
+        <div class="big-card">
+            <img src="images/art-2.jpeg" alt="">
+            <div class="card-info">
+                <h2>الدليل الملكي للعناية بالنخيل العربي</h2>
+                <p>تعرف على الوقت المثالي للتقريب (التكريب) وكيفية حماية نخيلك من آفات السوسة الحمراء لضمان إنتاج وجودة فائقة...</p>
+                <a href="article.html?id=2" class="read-btn">اقرأ المقال كاملاً</a>
+            </div>
+        </div>
+        <!-- مقال 3 -->
+        <div class="big-card">
+            <img src="images/art-3.webp" alt="">
+            <div class="card-info">
+                <h2>تصميم الشلالات والنوافير المودرن</h2>
+                <p>كيف تختار التصميم المائي الذي يدمج بين الفخامة والهدوء النفسي في فناء منزلك وكيفية العزل الصحيح للمياه...</p>
+                <a href="article.html?id=3" class="read-btn">اقرأ المقال كاملاً</a>
+            </div>
+        </div>
+        <!-- مقال 4 -->
+        <div class="big-card">
+            <img src="images/art-4.png" alt="">
+            <div class="card-info">
+                <h2>الثيل الطبيعي أم الصناعي؟ أيهما الأفضل؟</h2>
+                <p>مقارنة شاملة بين الثيل الطبيعي والصناعي من حيث التكلفة، الصيانة، والمظهر الجمالي لتختار الأنسب لحديقتك...</p>
+                <a href="article.html?id=4" class="read-btn">اقرأ المقال كاملاً</a>
+            </div>
+        </div>
+        <!-- مقال 5 -->
+        <div class="big-card">
+            <img src="images/art-5.jpg" alt="">
+            <div class="card-info">
+                <h2>الغرف الزجاجية: رفاهية العيش وسط الطبيعة</h2>
+                <p>لماذا أصبحت الغرف الزجاجية ضرورة في المنازل العصرية؟ وكيف توفر لك عزل حراري وصوتي مثالي للاسترخاء...</p>
+                <a href="article.html?id=5" class="read-btn">اقرأ المقال كاملاً</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
